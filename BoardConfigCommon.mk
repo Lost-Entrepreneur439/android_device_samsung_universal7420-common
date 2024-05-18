@@ -17,6 +17,9 @@
 COMMON_PATH := device/samsung/universal7420-common
 
 BUILD_BROKEN_DUP_RULES := true
+ALLOW_MISSING_DEPENDENCIES := true
+SELINUX_IGNORE_NEVERALLOWS := true
+
 BUILD_TOP := $(shell pwd)
 
 # Include path
@@ -94,7 +97,7 @@ BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
 BOARD_KERNEL_SEPARATED_DT := true
 TARGET_CUSTOM_DTBTOOL := dtbhtoolExynos
 TARGET_KERNEL_CLANG_COMPILE := false
-BOARD_USES_FULL_RECOVERY_IMAGE := false
+BOARD_USES_FULL_RECOVERY_IMAGE := true
 TARGET_KERNEL_LLVM_BINUTILS := false
 TARGET_KERNEL_ADDITIONAL_FLAGS := \
     HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"

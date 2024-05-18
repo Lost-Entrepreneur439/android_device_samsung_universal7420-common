@@ -22,6 +22,9 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
 	device/samsung/universal7420-common/overlay/hardware/samsung/AdvancedDisplay
 
+# APEX
+OVERRIDE_PRODUCT_COMPRESSED_APEX := false
+
 # Boot animation
 TARGET_BOOTANIMATION_PRELOAD := true
 TARGET_BOOTANIMATION_TEXTURE_CACHE := true
@@ -383,10 +386,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
 	$(COMMON_PATH)/configs/thermal/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
-
-# Trust
-PRODUCT_PACKAGES += \
-	vendor.lineage.trust@1.0-service
 
 # USB
 PRODUCT_PACKAGES += \
